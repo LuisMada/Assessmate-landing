@@ -1,0 +1,281 @@
+.app {
+    display: flex;
+    min-height: 100vh;
+    position: relative;
+}
+
+.sidebar {
+    width: var(--width-sidebar);
+    background: rgba(17, 24, 39, 0.95);
+    backdrop-filter: blur(20px);
+    border-right: 1px solid rgba(255, 255, 255, 0.1);
+    padding: var(--space-8) var(--space-6);
+    position: fixed;
+    height: 100vh;
+    left: 0;
+    top: 0;
+    z-index: var(--z-dropdown);
+    transform: translateX(-100%);
+    transition: transform var(--transition-base);
+}
+
+.sidebar.open {
+    transform: translateX(0);
+}
+
+.logo {
+    font-size: var(--text-2xl);
+    font-weight: var(--font-extrabold);
+    background: var(--gradient-primary);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    margin-bottom: var(--space-12);
+    display: flex;
+    align-items: center;
+    gap: var(--space-2);
+}
+
+.nav-links {
+    list-style: none;
+    margin-bottom: var(--space-12);
+}
+
+.nav-links li {
+    margin-bottom: var(--space-4);
+}
+
+.nav-links a {
+    color: var(--gray-300);
+    text-decoration: none;
+    font-weight: var(--font-medium);
+    padding: var(--space-3) var(--space-4);
+    border-radius: var(--radius-lg);
+    display: block;
+    transition: all var(--transition-base);
+}
+
+.nav-links a:hover,
+.nav-links a.active {
+    color: var(--white);
+    background: rgba(99, 102, 241, 0.2);
+    transform: translateX(4px);
+}
+
+.cta-sidebar {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    padding: var(--space-4) var(--space-6);
+    border-radius: var(--border-radius);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    width: 100%;
+    font-size: var(--text-base);
+    transition: all var(--transition-base);
+}
+
+.cta-sidebar:hover {
+    transform: translateY(-2px);
+    box-shadow: var(--shadow-card);
+}
+
+.mobile-menu-btn {
+    display: none;
+    position: fixed;
+    top: var(--space-6);
+    left: var(--space-6);
+    z-index: var(--z-modal);
+    background: rgba(17, 24, 39, 0.9);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    color: var(--white);
+    padding: var(--space-3);
+    border-radius: var(--radius-lg);
+    cursor: pointer;
+    transition: all var(--transition-base);
+}
+
+.main-content {
+    flex: 1;
+    margin-left: 0;
+    transition: margin-left var(--transition-base);
+}
+
+.hero {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    padding: var(--space-24) var(--space-8) var(--space-16);
+    position: relative;
+}
+
+.hero-container {
+    max-width: var(--width-container);
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: var(--space-12);
+    align-items: center;
+}
+
+.hero-text {
+    text-align: center;
+}
+
+.hero-text h1 {
+    font-size: clamp(2.5rem, 5vw, 4rem);
+    font-weight: var(--font-black);
+    line-height: var(--leading-tight);
+    margin-bottom: var(--space-6);
+    background: linear-gradient(135deg, var(--white) 0%, var(--gray-300) 100%);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.hero-text p {
+    font-size: clamp(var(--text-lg), 2vw, var(--text-xl));
+    color: var(--gray-300);
+    margin-bottom: var(--space-10);
+    max-width: 600px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: var(--space-4);
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+.hero-image {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.chatbot-mockup {
+    background: rgba(17, 24, 39, 0.8);
+    backdrop-filter: blur(20px);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--radius-3xl);
+    padding: var(--space-8);
+    max-width: 400px;
+    width: 100%;
+    box-shadow: var(--shadow);
+}
+
+.chatbot-header {
+    display: flex;
+    align-items: center;
+    gap: var(--space-4);
+    margin-bottom: var(--space-6);
+    padding-bottom: var(--space-4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tabs-section {
+    padding: var(--space-24) var(--space-8);
+    max-width: var(--width-container);
+    margin: 0 auto;
+}
+
+.tabs-header {
+    display: flex;
+    justify-content: center;
+    margin-bottom: var(--space-12);
+    flex-wrap: wrap;
+    gap: var(--space-4);
+    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.tab-btn {
+    background: transparent;
+    color: var(--gray-400);
+    border: none;
+    padding: var(--space-4) var(--space-6);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    border-bottom: 3px solid transparent;
+}
+
+.tab-btn.active {
+    color: var(--white);
+    border-bottom-color: var(--primary);
+}
+
+.tab-btn:hover {
+    color: var(--white);
+}
+
+.tab-content {
+    display: none;
+}
+
+.tab-content.active {
+    display: block;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(280px, 1fr));
+    gap: var(--space-8);
+    margin-top: var(--space-12);
+}
+
+.steps-container {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: var(--space-8);
+    margin-top: var(--space-12);
+}
+
+.step {
+    text-align: center;
+    position: relative;
+}
+
+.step-number {
+    width: 60px;
+    height: 60px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    color: var(--white);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: var(--text-2xl);
+    font-weight: var(--font-bold);
+    margin: 0 auto var(--space-6);
+}
+
+.social-proof {
+    padding: var(--space-16) var(--space-8);
+    text-align: center;
+    background: rgba(17, 24, 39, 0.3);
+    backdrop-filter: blur(20px);
+}
+
+.final-cta {
+    padding: var(--space-24) var(--space-8);
+    text-align: center;
+    background: var(--gradient-primary);
+    position: relative;
+    overflow: hidden;
+}
+
+.final-cta h2 {
+    font-size: clamp(2rem, 4vw, 3rem);
+    font-weight: var(--font-extrabold);
+    margin-bottom: var(--space-4);
+    color: var(--white);
+}
+
+.final-cta p {
+    font-size: var(--text-xl);
+    margin-bottom: var(--space-8);
+    color: rgba(255, 255, 255, 0.9);
+}

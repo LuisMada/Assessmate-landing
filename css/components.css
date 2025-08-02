@@ -1,0 +1,121 @@
+.btn-primary {
+    background: var(--gradient-primary);
+    color: var(--white);
+    border: none;
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--border-radius);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    display: inline-block;
+    position: relative;
+    overflow: hidden;
+}
+
+.btn-primary:hover {
+    transform: translateY(-3px);
+    box-shadow: var(--shadow);
+}
+
+.btn-secondary {
+    background: transparent;
+    color: var(--white);
+    border: 2px solid rgba(255, 255, 255, 0.3);
+    padding: var(--space-4) var(--space-8);
+    border-radius: var(--border-radius);
+    font-weight: var(--font-semibold);
+    cursor: pointer;
+    transition: all var(--transition-base);
+    text-decoration: none;
+    display: inline-block;
+    backdrop-filter: blur(var(--blur-base));
+}
+
+.btn-secondary:hover {
+    border-color: var(--primary);
+    background: rgba(99, 102, 241, 0.1);
+    transform: translateY(-3px);
+}
+
+.feature-card {
+    background: rgba(17, 24, 39, 0.6);
+    backdrop-filter: blur(var(--blur-xl));
+    border: 1px solid rgba(255, 255, 255, 0.1);
+    border-radius: var(--border-radius);
+    padding: var(--space-8);
+    transition: all var(--transition-base);
+    position: relative;
+    overflow: hidden;
+}
+
+.feature-card:hover {
+    transform: translateY(-5px);
+    box-shadow: var(--shadow-card);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: var(--space-4);
+    display: block;
+}
+
+.feature-card h3 {
+    font-size: var(--text-xl);
+    font-weight: var(--font-bold);
+    margin-bottom: var(--space-4);
+    color: var(--white);
+}
+
+.feature-card p {
+    color: var(--gray-300);
+    line-height: var(--leading-relaxed);
+}
+
+.avatar {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    background: var(--gradient-primary);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 1.2rem;
+}
+
+.message {
+    padding: 0.75rem 1rem;
+    border-radius: 1rem;
+    margin-bottom: 1rem;
+}
+
+.message.bot {
+    background: rgba(99, 102, 241, 0.2);
+    margin-right: 2rem;
+}
+
+.message.user {
+    background: rgba(255, 255, 255, 0.1);
+    margin-left: 2rem;
+}
+
+.testimonial {
+    max-width: 800px;
+    margin: 0 auto;
+    padding: var(--space-8);
+    border-radius: var(--border-radius);
+    background: rgba(255, 255, 255, 0.05);
+    border: 1px solid rgba(255, 255, 255, 0.1);
+}
+
+.testimonial blockquote {
+    font-size: var(--text-xl);
+    font-style: italic;
+    margin-bottom: var(--space-6);
+    color: var(--white);
+}
+
+.testimonial cite {
+    color: var(--gray-300);
+    font-weight: var(--font-semibold);
+}

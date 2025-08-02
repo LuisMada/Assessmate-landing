@@ -1,0 +1,213 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Assessmate - Screen 100% of applicants. Talk to only the best.</title>
+    
+    <!-- CSS Files -->
+    <link rel="stylesheet" href="css/variables.css">
+    <link rel="stylesheet" href="css/base.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/animations.css">
+    <link rel="stylesheet" href="css/responsive.css">
+</head>
+<body>
+    <div class="bg-animation"></div>
+    
+    <div class="app">
+        <!-- Mobile Menu Button -->
+        <button class="mobile-menu-btn" id="mobileMenuBtn">
+            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
+                <line x1="3" y1="6" x2="21" y2="6"></line>
+                <line x1="3" y1="12" x2="21" y2="12"></line>
+                <line x1="3" y1="18" x2="21" y2="18"></line>
+            </svg>
+        </button>
+
+        <!-- Sidebar -->
+        <nav class="sidebar" id="sidebar">
+            <div class="logo" id="logo">🤖 Assessmate</div>
+            
+            <ul class="nav-links" id="navLinks">
+                <li><a href="#home" class="active" onclick="setActiveTab('home')">Home</a></li>
+                <li><a href="#features" onclick="setActiveTab('features')">Features</a></li>
+                <li><a href="#use-cases" onclick="setActiveTab('use-cases')">Use Cases</a></li>
+                <li><a href="#demo" onclick="setActiveTab('demo')">Demo</a></li>
+                <li><a href="#contact" onclick="setActiveTab('contact')">Contact</a></li>
+            </ul>
+            
+            <button class="cta-sidebar" id="ctaSidebar" onclick="bookDemo()">Book a Demo</button>
+        </nav>
+
+        <!-- Main Content -->
+        <main class="main-content">
+            <!-- Hero Section -->
+            <section class="hero" id="home">
+                <div class="hero-container">
+                    <div class="hero-text">
+                        <h1 id="heroHeadline">Screen 100% of applicants. Talk to only the best.</h1>
+                        <p id="heroSubtext">Assessmate handles first-round screening so your team doesn't have to.</p>
+                        <div class="hero-buttons" id="heroButtons">
+                            <a href="#demo" class="btn-primary" onclick="tryDemo()">Try a Demo</a>
+                            <a href="#how-it-works" class="btn-secondary" onclick="showTab('how-it-works')">How It Works</a>
+                        </div>
+                    </div>
+                    
+                    <div class="hero-image">
+                        <div class="chatbot-mockup" id="chatbotDemo">
+                            <div class="chatbot-header">
+                                <div class="avatar">🤖</div>
+                                <div>
+                                    <div style="font-weight: 600;">Assessmate AI</div>
+                                    <div style="font-size: 0.875rem; color: var(--gray-400);">Online</div>
+                                </div>
+                            </div>
+                            <div class="chat-messages" id="chatMessages">
+                                <div class="message bot">Hi! I'm here to help with your application. What position are you applying for?</div>
+                                <div class="message user">Software Engineer</div>
+                                <div class="message bot">Great! Let's start with a few questions about your experience...</div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Tabs Section -->
+            <section class="tabs-section">
+                <div class="tabs-header" id="tabsHeader">
+                    <button class="tab-btn active" onclick="showTab('features')">Features</button>
+                    <button class="tab-btn" onclick="showTab('how-it-works')">How It Works</button>
+                    <button class="tab-btn" onclick="showTab('use-cases')">Use Cases</button>
+                    <button class="tab-btn" onclick="showTab('faq')">FAQ</button>
+                </div>
+                
+                <div id="tabsContent">
+                    <!-- Features Tab -->
+                    <div class="tab-content active" id="features">
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <span class="feature-icon">🧠</span>
+                                <h3>Human-like AI Screening</h3>
+                                <p>Natural conversations that feel authentic while gathering crucial applicant information efficiently.</p>
+                            </div>
+                            <div class="feature-card">
+                                <span class="feature-icon">⌨️</span>
+                                <h3>Typing & Diction Test Modules</h3>
+                                <p>Built-in assessments for roles requiring specific skills, with automated scoring and detailed feedback.</p>
+                            </div>
+                            <div class="feature-card">
+                                <span class="feature-icon">📊</span>
+                                <h3>Progress Tracking Dashboard</h3>
+                                <p>Real-time visibility into screening progress with comprehensive analytics and candidate insights.</p>
+                            </div>
+                            <div class="feature-card">
+                                <span class="feature-icon">🎯</span>
+                                <h3>Scoring and Strengths Summary</h3>
+                                <p>Intelligent evaluation with clear recommendations to help you focus on the most promising candidates.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- How It Works Tab -->
+                    <div class="tab-content" id="how-it-works">
+                        <div class="steps-container">
+                            <div class="step">
+                                <div class="step-number">1</div>
+                                <h3>Get Your Chatbot Link</h3>
+                                <p>Set up your custom screening bot in minutes with your specific requirements and questions.</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">2</div>
+                                <h3>Applicants Chat & Test</h3>
+                                <p>Candidates interact naturally with AI and complete relevant skill assessments.</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">3</div>
+                                <h3>System Scores & Tracks</h3>
+                                <p>Advanced algorithms evaluate responses and test results automatically.</p>
+                            </div>
+                            <div class="step">
+                                <div class="step-number">4</div>
+                                <h3>Review Top Candidates</h3>
+                                <p>Receive ranked summaries and focus your time on the most qualified applicants.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Use Cases Tab -->
+                    <div class="tab-content" id="use-cases">
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <span class="feature-icon">💼</span>
+                                <h3>High-Volume Recruitment</h3>
+                                <p>Perfect for companies receiving hundreds of applications. Screen everyone without overwhelming your team.</p>
+                            </div>
+                            <div class="feature-card">
+                                <span class="feature-icon">🚀</span>
+                                <h3>Startups & Scale-ups</h3>
+                                <p>Limited HR resources? Assessmate acts as your first line of screening, ensuring no good candidate is missed.</p>
+                            </div>
+                            <div class="feature-card">
+                                <span class="feature-icon">🏢</span>
+                                <h3>Enterprise Organizations</h3>
+                                <p>Standardize screening across departments while maintaining quality and compliance standards.</p>
+                            </div>
+                            <div class="feature-card">
+                                <span class="feature-icon">🎯</span>
+                                <h3>Specialized Roles</h3>
+                                <p>Custom assessments for technical positions, customer service, or any role requiring specific skills.</p>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- FAQ Tab -->
+                    <div class="tab-content" id="faq">
+                        <div class="features-grid">
+                            <div class="feature-card">
+                                <h3>How long does setup take?</h3>
+                                <p>Most companies are up and running within 15 minutes. Simply configure your questions and share the link.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h3>Can I customize the screening questions?</h3>
+                                <p>Absolutely! Tailor questions to your specific role requirements and company culture.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h3>What about candidate privacy?</h3>
+                                <p>We're GDPR compliant with enterprise-grade security. Candidate data is encrypted and protected.</p>
+                            </div>
+                            <div class="feature-card">
+                                <h3>How accurate is the AI scoring?</h3>
+                                <p>Our AI achieves 94% correlation with human recruiters, continuously improving with each interaction.</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Social Proof -->
+            <section class="social-proof">
+                <div class="testimonial" id="testimonialSection">
+                    <blockquote>"Assessmate reduced our screening time by 80% while actually improving candidate quality. It's like having a senior recruiter working 24/7."</blockquote>
+                    <cite>— Sarah Chen, Head of Talent at TechFlow</cite>
+                </div>
+            </section>
+
+            <!-- Final CTA -->
+            <section class="final-cta" id="finalCTA">
+                <h2>Hiring doesn't have to be overwhelming.</h2>
+                <p>Let Assessmate do the first pass.</p>
+                <button class="btn-primary" onclick="bookDemo()" style="background: rgba(255,255,255,0.2); backdrop-filter: blur(10px); border: 2px solid rgba(255,255,255,0.3);">Book a Free Demo</button>
+            </section>
+        </main>
+    </div>
+
+    <!-- JavaScript Files -->
+    <script src="js/config.js"></script>
+    <script src="js/navigation.js"></script>
+    <script src="js/animations.js"></script>
+    <script src="js/demo.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
