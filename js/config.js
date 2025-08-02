@@ -139,6 +139,14 @@ const SITE_CONFIG = {
         title: "Head of Talent at TechFlow"
     },
 
+    // Dashboard Preview Section
+    dashboard: {
+        headline: "Powerful insights at your fingertips",
+        subtext: "Track candidate progress, review scores, and manage your hiring pipeline with our intuitive dashboard.",
+        imageSrc: "assets/images/dashboard-preview.png",
+        imageAlt: "Assessmate Dashboard"
+    },
+
     // Final CTA
     finalCTA: {
         headline: "Hiring doesn't have to be overwhelming.",

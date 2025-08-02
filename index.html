@@ -17,30 +17,6 @@
     <div class="bg-animation"></div>
     
     <div class="app">
-        <!-- Mobile Menu Button -->
-        <button class="mobile-menu-btn" id="mobileMenuBtn">
-            <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2">
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
-        </button>
-
-        <!-- Sidebar -->
-        <nav class="sidebar" id="sidebar">
-            <div class="logo" id="logo">🤖 Assessmate</div>
-            
-            <ul class="nav-links" id="navLinks">
-                <li><a href="#home" class="active" onclick="setActiveTab('home')">Home</a></li>
-                <li><a href="#features" onclick="setActiveTab('features')">Features</a></li>
-                <li><a href="#use-cases" onclick="setActiveTab('use-cases')">Use Cases</a></li>
-                <li><a href="#demo" onclick="setActiveTab('demo')">Demo</a></li>
-                <li><a href="#contact" onclick="setActiveTab('contact')">Contact</a></li>
-            </ul>
-            
-            <button class="cta-sidebar" id="ctaSidebar" onclick="bookDemo()">Book a Demo</button>
-        </nav>
-
         <!-- Main Content -->
         <main class="main-content">
             <!-- Hero Section -->
@@ -70,6 +46,19 @@
                                 <div class="message bot">Great! Let's start with a few questions about your experience...</div>
                             </div>
                         </div>
+                    </div>
+                </div>
+            </section>
+
+            <!-- Dashboard Preview Section -->
+            <section class="dashboard-preview" id="dashboardPreview">
+                <div class="dashboard-container">
+                    <div class="dashboard-content">
+                        <h2 id="dashboardHeadline">Powerful insights at your fingertips</h2>
+                        <p id="dashboardSubtext">Track candidate progress, review scores, and manage your hiring pipeline with our intuitive dashboard.</p>
+                    </div>
+                    <div class="dashboard-image">
+                        <img id="dashboardImage" src="assets/images/dashboard-preview.png" alt="Assessmate Dashboard" />
                     </div>
                 </div>
             </section>

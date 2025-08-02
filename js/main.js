@@ -23,52 +23,14 @@ class AssessmateApp {
     }
 
     render() {
-        this.renderLogo();
-        this.renderNavigation();
         this.renderHero();
+        this.renderDashboard();
         this.renderTabs();
         this.renderTestimonial();
         this.renderFinalCTA();
         this.initializeFeatures();
     }
 
-    renderLogo() {
-        const logoEl = document.getElementById('logo');
-        if (logoEl) {
-            if (this.config.company.logo.startsWith('http') || this.config.company.logo.includes('.')) {
-                // It's an image URL
-                logoEl.innerHTML = `
-                    <img src="${this.config.company.logo}" alt="${this.config.company.name}" style="height: 30px; margin-right: 0.5rem;">
-                    ${this.config.company.name}
-                `;
-            } else {
-                // It's an emoji or text
-                logoEl.innerHTML = `${this.config.company.logo} ${this.config.company.name}`;
-            }
-        }
-    }
-
-    renderNavigation() {
-        const navLinksEl = document.getElementById('navLinks');
-        const ctaSidebarEl = document.getElementById('ctaSidebar');
-        
-        if (navLinksEl) {
-            navLinksEl.innerHTML = this.config.navigation.map((item, index) => `
-                <li>
-                    <a href="${item.href}" 
-                       class="${index === 0 ? 'active' : ''}" 
-                       onclick="setActiveTab('${item.id}')">
-                        ${item.label}
-                    </a>
-                </li>
-            `).join('');
-        }
-        
-        if (ctaSidebarEl) {
-            ctaSidebarEl.textContent = this.config.sidebarCTA;
-            ctaSidebarEl.onclick = () => this.handleBookDemo();
-        }
-    }
 
     renderHero() {
         const heroHeadlineEl = document.getElementById('heroHeadline');
@@ -83,6 +45,20 @@ class AssessmateApp {
                 <a href="#demo" class="btn-primary" onclick="tryDemo()">${this.config.hero.primaryCTA}</a>
                 <a href="#how-it-works" class="btn-secondary" onclick="showTab('how-it-works')">${this.config.hero.secondaryCTA}</a>
             `;
+        }
+    }
+
+    renderDashboard() {
+        const dashboardHeadlineEl = document.getElementById('dashboardHeadline');
+        const dashboardSubtextEl = document.getElementById('dashboardSubtext');
+        const dashboardImageEl = document.getElementById('dashboardImage');
+        const dashboard = this.config.dashboard;
+        
+        if (dashboardHeadlineEl && dashboard) dashboardHeadlineEl.textContent = dashboard.headline;
+        if (dashboardSubtextEl && dashboard) dashboardSubtextEl.textContent = dashboard.subtext;
+        if (dashboardImageEl && dashboard) {
+            dashboardImageEl.src = dashboard.imageSrc;
+            dashboardImageEl.alt = dashboard.imageAlt;
         }
     }
 
@@ -288,29 +264,8 @@ function showTab(tabName) {
         clickedBtn.classList.add('active');
     }
 
-    // Close sidebar on mobile after navigation
-    if (window.innerWidth <= 1024) {
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar) sidebar.classList.remove('open');
-    }
 }
 
-function setActiveTab(tabName) {
-    const navLinks = document.querySelectorAll('.nav-links a');
-    navLinks.forEach(link => {
-        link.classList.remove('active');
-    });
-    
-    if (event.target) {
-        event.target.classList.add('active');
-    }
-    
-    // Close sidebar on mobile after navigation
-    if (window.innerWidth <= 1024) {
-        const sidebar = document.getElementById('sidebar');
-        if (sidebar) sidebar.classList.remove('open');
-    }
-}
 
 // Initialize the app
 window.app = new AssessmateApp();

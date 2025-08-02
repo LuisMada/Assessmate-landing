@@ -97,9 +97,7 @@
 }
 
 .main-content {
-    flex: 1;
-    margin-left: 0;
-    transition: margin-left var(--transition-base);
+    width: 100%;
 }
 
 .hero {
@@ -128,15 +126,12 @@
     font-weight: var(--font-black);
     line-height: var(--leading-tight);
     margin-bottom: var(--space-6);
-    background: linear-gradient(135deg, var(--white) 0%, var(--gray-300) 100%);
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-clip: text;
+    color: var(--dark);
 }
 
 .hero-text p {
     font-size: clamp(var(--text-lg), 2vw, var(--text-xl));
-    color: var(--gray-300);
+    color: var(--gray-600);
     margin-bottom: var(--space-10);
     max-width: 600px;
     margin-left: auto;
@@ -157,9 +152,8 @@
 }
 
 .chatbot-mockup {
-    background: rgba(17, 24, 39, 0.8);
-    backdrop-filter: blur(20px);
-    border: 1px solid rgba(255, 255, 255, 0.1);
+    background: var(--white);
+    border: 1px solid var(--gray-200);
     border-radius: var(--radius-3xl);
     padding: var(--space-8);
     max-width: 400px;
@@ -173,7 +167,7 @@
     gap: var(--space-4);
     margin-bottom: var(--space-6);
     padding-bottom: var(--space-4);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--gray-200);
 }
 
 .tabs-section {
@@ -188,12 +182,12 @@
     margin-bottom: var(--space-12);
     flex-wrap: wrap;
     gap: var(--space-4);
-    border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+    border-bottom: 1px solid var(--gray-200);
 }
 
 .tab-btn {
     background: transparent;
-    color: var(--gray-400);
+    color: var(--gray-500);
     border: none;
     padding: var(--space-4) var(--space-6);
     font-weight: var(--font-semibold);
@@ -203,12 +197,12 @@
 }
 
 .tab-btn.active {
-    color: var(--white);
+    color: var(--primary);
     border-bottom-color: var(--primary);
 }
 
 .tab-btn:hover {
-    color: var(--white);
+    color: var(--primary);
 }
 
 .tab-content {
@@ -255,8 +249,7 @@
 .social-proof {
     padding: var(--space-16) var(--space-8);
     text-align: center;
-    background: rgba(17, 24, 39, 0.3);
-    backdrop-filter: blur(20px);
+    background: var(--gray-100);
 }
 
 .final-cta {

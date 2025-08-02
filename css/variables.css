@@ -6,32 +6,32 @@
    :root {
     /* === COLORS === */
     /* Primary Brand Colors */
-    --primary: #6366f1;
-    --primary-dark: #4f46e5;
-    --primary-light: #818cf8;
+    --primary: #183EB2;
+    --primary-dark: #0f2d8a;
+    --primary-light: #2d52c7;
     
     /* Secondary Colors */
-    --secondary: #ec4899;
-    --secondary-dark: #db2777;
-    --secondary-light: #f472b6;
+    --secondary: #1e40af;
+    --secondary-dark: #1e3a8a;
+    --secondary-light: #3b82f6;
     
     /* Accent Colors */
     --accent: #06b6d4;
     --accent-dark: #0891b2;
     --accent-light: #22d3ee;
     
-    /* Neutral Colors */
-    --dark: #0f172a;
-    --gray-900: #111827;
-    --gray-800: #1f2937;
-    --gray-700: #374151;
-    --gray-600: #4b5563;
-    --gray-500: #6b7280;
-    --gray-400: #9ca3af;
-    --gray-300: #d1d5db;
-    --gray-200: #e5e7eb;
-    --gray-100: #f3f4f6;
+    /* Neutral Colors - Light Mode */
     --white: #ffffff;
+    --gray-100: #f8fafc;
+    --gray-200: #f1f5f9;
+    --gray-300: #e2e8f0;
+    --gray-400: #cbd5e1;
+    --gray-500: #94a3b8;
+    --gray-600: #64748b;
+    --gray-700: #475569;
+    --gray-800: #334155;
+    --gray-900: #1e293b;
+    --dark: #0f172a;
     
     /* Semantic Colors */
     --success: #10b981;
